@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: navajowhite;
 }
 
 .App-link {
@@ -42,3 +42,4 @@
     font-family: 'MyFont';
     src: local('MyFont'), url(../font/GloriaHallelujah-Regular.ttf) format('truetype');
 }
+

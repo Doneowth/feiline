@@ -4,16 +4,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import ArticleImg from '../logo.svg'
 
 export default function ArticleCard() {
     return (
-        <Card sx={{ maxWidth: 300 }}>
+        <Card sx={{ maxWidth: 400 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="80"
-                    image="/src/logo3.png"
-                    alt="green iguana"
+                    height="100"
+                    image={ArticleImg}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
