@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+    font-family: MyFont, serif;
 }
 
 .App-logo {
@@ -35,4 +36,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(../font/GloriaHallelujah-Regular.ttf) format('truetype');
 }
