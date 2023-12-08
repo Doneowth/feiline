@@ -24,12 +24,15 @@ const Home: React.FC<HomeProps> = ({ username, onLogout }) => {
                         flexWrap: 'wrap',
                         '& > :not(style)': {
                             m: 1,
-                            width: 128,
-                            height: 128,
+                            width: 225,
+                            height: 144,
                         },
                     }}
                 >
-                    <ArticleCard/><ArticleCard/><ArticleCard/>
+                    <ArticleCard to="/article/1"/>
+                    <ArticleCard to="/article/1"/>
+                    <ArticleCard to="/article/1"/>
+
                 </Box>
             </div>
         </>
