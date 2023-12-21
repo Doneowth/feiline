@@ -34,7 +34,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                 <label>Password:</label>
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
-            <Button variant="contained" onClick={handleLogin}> GO </Button>
+            <Button variant="contained" onClick={handleLogin}> → </Button>
 
         </div>
     );

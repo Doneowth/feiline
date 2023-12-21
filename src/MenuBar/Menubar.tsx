@@ -10,10 +10,9 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import avatar from '../logo2.svg'
 
 const pages = ['block A', 'block B', 'bloc C'];
-const settings = ['Logout'];
+const settings = [ 'Profile', 'Logout'];
 
 interface HomeProps {
     username: string; // Explicitly specify the type as string
@@ -35,7 +34,6 @@ const MenuBar: React.FC<HomeProps> = ({ username, onLogout }) => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-
 
     return (
         <AppBar position="fixed" color="transparent">
@@ -102,7 +100,7 @@ const MenuBar: React.FC<HomeProps> = ({ username, onLogout }) => {
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt={username} src={avatar} />
+                                <Avatar >{username}</Avatar>
                             </IconButton>
                         </Tooltip>
                         <Menu
@@ -123,7 +121,7 @@ const MenuBar: React.FC<HomeProps> = ({ username, onLogout }) => {
                         >
                             {settings.map((setting) => (
                                 <MenuItem key={setting} onClick={onLogout}>
-                                    <Typography textAlign="right"> {setting} </Typography>
+                                    <Typography > {setting} </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>

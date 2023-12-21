@@ -1,0 +1,14 @@
+.Article {
+    text-align: left;
+    margin: 25px;
+}
+
+.ArticleCard {
+    margin-top: 1%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.ArticleHead {
+    margin-top: 10%;
+}

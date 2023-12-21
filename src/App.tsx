@@ -24,6 +24,7 @@ function App() {
         setLoggedIn(false);
         localStorage.setItem('loggedIn', JSON.stringify(false));
         setUsername('');
+        // return <Navigate to="/login" replace />
         // navigate('/login', { replace: true });
     };
 
@@ -34,22 +35,6 @@ function App() {
             setLoggedIn(JSON.parse(storedLoginStatus));
         }
     }, []);
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //         <div>
-  //             {loggedIn ? (
-  //                 <Home username={username} onLogout={handleLogout} />
-  //             ) : (
-  //                 <>
-  //                     <img src={logo3} className="App-logo" alt="logo" />
-  //                     <Login onLogin={handleLogin} />
-  //                 </>
-  //             )}
-  //         </div>
-  //     </header>
-  //   </div>
-  // );
 
     return (
         <div className="App">
@@ -59,7 +44,7 @@ function App() {
                         <Route
                             path="/login"
                             element={
-                                loggedIn ? (
+                                username && loggedIn ? (
                                     <Navigate to="/" replace />
                                 ) : (
                                     <Login onLogin={handleLogin} />
@@ -69,7 +54,7 @@ function App() {
                         <Route
                             path="/"
                             element={
-                                loggedIn ? (
+                                username && loggedIn ? (
                                     <Home username={username} onLogout={handleLogout} />
                                 ) : (
                                     // Redirect to the login page if not logged in
@@ -78,7 +63,7 @@ function App() {
                                 )
                             }
                         />
-                        <Route path="/article/1" element={<Article markdownFile={markdownFilePath}/>} />
+                        <Route path="/article/1" element={<Article markdownFile={markdownFilePath} username={username} onLogout={handleLogout} />} />
                     </Routes>
                 </Router>
             </header>
